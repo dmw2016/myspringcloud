@@ -47,11 +47,21 @@ public class UserGroupWeb {
             return checkFieldNull(userGroup);
         }
     }
+
+    /**
+     * 判断字段是否为空
+     * @param userGroup
+     * @return
+     */
     private String checkFieldNull(UserGroup userGroup){
 
         if(userGroup.getGroupName()==null
                 || "".equals(userGroup.getGroupName().trim())){
             return "用户组名称不能为空。";
+        }else if(userGroup.getSimpleName()==null
+                || "".equals(userGroup.getSimpleName().trim())){
+
+            return "用户组简称不能为空。";
         }else if(userGroup.getPgroupCode()==0){
             return "用户组父组编码为能为空。";
         }else if(userGroup.getStatus()==null

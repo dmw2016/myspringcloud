@@ -20,6 +20,12 @@ public class UserGroup {
      *用户组名称
      */
     private String groupName;
+
+    /**
+     *用户组简称
+     */
+    private String simpleName;
+
     /**
      *用户组状态
      * 单值，0可用，1不可用
@@ -53,6 +59,13 @@ public class UserGroup {
     public void setGroupName(String groupName) {
         this.groupName = groupName;
     }
+    public String getSimpleName() {
+        return simpleName;
+    }
+
+    public void setSimpleName(String simpleName) {
+        this.simpleName = simpleName;
+    }
 
     public String getStatus() {
         return status;
@@ -73,10 +86,11 @@ public class UserGroup {
     public UserGroup() {
     }
 
-    public UserGroup(int groupCode, int pgroupCode, String groupName, String status, String remark) {
+    public UserGroup(int groupCode, int pgroupCode, String groupName,String simpleName, String status, String remark) {
         this.groupCode = groupCode;
         this.pgroupCode = pgroupCode;
         this.groupName = groupName;
+        this.simpleName = simpleName;
         this.status = status;
         this.remark = remark;
     }
